@@ -1,0 +1,650 @@
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Hostel</title>
+        
+        <link rel="stylesheet" href="main.css">
+        <script src="https://kit.fontawesome.com/dbed6b6114.js" crossorigin="anonymous"></script>
+        
+    </head>
+    <body>
+    <!-- header -->
+       <header class = "header" id = "header">
+            <div class = "head-top">
+                <div class = "site-name"> 
+
+                    <span>Hostel Name</span>
+                </div>
+                <div class = "site-nav">
+                    <span id = "nav-btn">MENU <i class = "fas fa-bars"></i></span>
+                </div>
+            </div>
+
+         <div class = "head-bottom flex">
+                <h2> Gallery</h2>
+       
+            </div>
+            </header>
+        <!-- end of header -->  
+
+        <!-- side navbar -->
+        <div class = "sidenav" id = "sidenav">
+            <span class = "cancel-btn" id = "cancel-btn">
+                <i class = "fas fa-times"></i>
+            </span>
+
+            <ul class = "navbar">
+                <li><a href = index.html>home</a></li>
+                <li><a href = Service.html>Services</a></li>
+                <li><a href = "index.html#rooms">We Accommodate</a></li>
+                <li><a href = Gallery.html>Gallery</a></li>
+                <li><a href = "index.html#ContactUs">Contact Us</a></li>
+
+               
+            </ul>
+
+        </div>
+        <!-- end of side navbar -->
+
+        
+    <script src="script.js"></script>
+
+    </body>
+    </html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+
+  font-family: Verdana, sans-serif;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.row > .column {
+  padding: 0 8px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.column {
+  float: left;
+  width: 25%;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: black;
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  width: 95%;
+  max-width: 1200px;
+}
+
+/* The Close Button */
+.close {
+  color: white;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #999;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.mySlides {
+  display: none;
+}
+
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: white;
+  background-color: black;
+  font-size: 22px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+img {
+  margin-bottom: -4px;
+}
+
+.caption-container {
+  text-align: center;
+  background-color: black;
+  padding: 2px 16px;
+  color: white;
+}
+
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+img.hover-shadow {
+  transition: 0.3s;
+}
+
+.hover-shadow:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+  background-color: #f1f1f1;
+  padding: 20px;
+  font-family: Arial;
+}
+
+/* Center website */
+.main {
+  max-width: 1000px;
+  margin: auto;
+}
+
+h1 {
+  font-size: 50px;
+  word-break: break-all;
+}
+
+.row {
+  margin: 10px -16px;
+}
+
+/* Add padding BETWEEN each column */
+.row,
+.row > .column {
+  padding: 8px;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 33.33%;
+  display: none; /* Hide all elements by default */
+}
+
+/* Clear floats after rows */ 
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Content */
+.content {
+  background-color: white;
+  padding: 10px;
+}
+
+/* The "show" class is added to the filtered elements */
+.show {
+  display: block;
+}
+
+/* Style the buttons */
+.bttn {
+  border: none;
+  outline: none;
+  font-size: 20;
+  padding: 12px 16px;
+  background-color: white;
+  cursor: pointer;
+}
+
+.bttn:hover {
+  background-color: #ddd;
+}
+
+.bttn.active {
+  background-color: #666;
+  color: white;
+}
+</style>
+</head>
+<body>
+
+<!-- MAIN (Center website) -->
+<div class="main">
+
+
+
+
+
+  
+<div id="myDIV">
+  <button class="bttn active" onclick="filterSelection('all')" > Show All</button>
+  <button class="bttn" onclick="filterSelection('Building View')"> Building View</button>
+  <button class="bttn" onclick="filterSelection('Reception')"> Reception</button>
+  <button class="bttn" onclick="filterSelection('Our Rooms')"> Our Rooms</button>
+  <button class="bttn" onclick="filterSelection('Other Facilities')"> Other Facilites</button>
+  <button class="bttn" onclick="filterSelection('Mess')"> Mess</button>
+  <button class="bttn" onclick="filterSelection('Food Menu')"> Food Menu</button>
+
+
+
+</div>
+
+<script>
+// Add active class to the current button (highlight it)
+var header = document.getElementById("myDIV");
+var btns = header.getElementsByClassName("bttn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function() {
+  var current = document.getElementsByClassName("active");
+  current[0].className = current[0].className.replace(" active", "");
+  this.className += " active";
+  });
+}
+</script>
+
+
+
+
+
+<div id="mybttnContainer">
+
+
+
+</div>
+
+<!-- Portfolio Gallery Grid -->
+<div class="row">
+  <div class="column Building View">
+    <div class="content">
+
+  <video  src="videos/movie.mp4" alt="Lights" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+</video>
+      <h4>Mountains</h4>
+      <p>Lorem ipsum dolor..</p>
+    </div>
+  </div>
+  <div class="column Building View">
+    <div class="content">
+    <img src="images/b2.jpg" alt="Lights" style="width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+      <h4>Lights</h4>
+      <p>Lorem ipsum dolor..</p>
+    </div>
+  </div>
+  <div class="column Building View">
+    <div class="content">
+    <img src="images/b3.jpg" alt="Building View" style="width:100%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+      <h4>Forest</h4>
+      <p>Lorem ipsum dolor..</p>
+    </div>
+  </div>
+  
+  <div class="column Reception">
+    <div class="content">
+      <img src="images/re1.jpg" alt="Car" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+      <h4>Retro</h4>
+      <p>Lorem ipsum dolor..</p>
+    </div>
+  </div>
+  <div class="column Reception">
+    <div class="content">
+    <img src="images/re2.jpg" alt="Car" style="width:100%" onclick="openModal();currentSlide(5)" class="hover-shadow cursor">
+      <h4>Fast</h4>
+      <p>Lorem ipsum dolor..</p>
+    </div>
+  </div>
+  <div class="column Reception">
+    <div class="content">
+    <img src="images/re3.jpg" alt="Car" style="width:100%" onclick="openModal();currentSlide(6)" class="hover-shadow cursor">
+      <h4>Classic</h4>
+      <p>Lorem ipsum dolor..</p>
+    </div>
+  </div>
+
+  <div class="column Our Rooms">
+    <div class="content">
+      <img src="images/r1.jpg" alt="Car" style="width:100%" onclick="openModal();currentSlide(7)" class="hover-shadow cursor">
+      <h4>Girl</h4>
+      <p>Lorem ipsum dolor..</p>
+    </div>
+  </div>
+  <div class="column Our Rooms">
+    <div class="content">
+    <img src="images/r2.jpg" alt="Car" style="width:100%" onclick="openModal();currentSlide(8)" class="hover-shadow cursor">
+      <h4>Man</h4>
+      <p>Lorem ipsum dolor..</p>
+    </div>
+  </div>
+  <div class="column Our Rooms">
+    <div class="content">
+    <img src="images/r3.jpg" alt="Car" style="width:100%" onclick="openModal();currentSlide(9)" class="hover-shadow cursor">
+      <h4>Woman</h4>
+      <p>Lorem ipsum dolor..</p>
+    </div>
+  </div>
+  <div class="column Other Facilities">
+    <div class="content">
+    <img src="images/o1.jpg" alt="Car" style="width:100%" onclick="openModal();currentSlide(10)" class="hover-shadow cursor">
+      <h4>Woman</h4>
+      <p>Lorem ipsum dolor..</p>
+    </div>
+  </div>
+  <div class="column Other Facilities">
+    <div class="content">
+    <img src="images/o2.jpg" alt="Car" style="width:100%" onclick="openModal();currentSlide(11)" class="hover-shadow cursor">
+      <h4>Woman</h4>
+      <p>Lorem ipsum dolor..</p>
+    </div>
+  </div>
+  <div class="column Other Facilities">
+    <div class="content">
+    <img src="images/o3.jpg" alt="Car" style="width:100%" onclick="openModal();currentSlide(12)" class="hover-shadow cursor">
+      <h4>Woman</h4>
+      <p>Lorem ipsum dolor..</p>
+    </div>
+  </div>
+  <div class="column Mess">
+    <div class="content">
+    <img src="images/m1.jpg" alt="Car" style="width:100%" onclick="openModal();currentSlide(13)" class="hover-shadow cursor">
+      <h4>Woman</h4>
+      <p>Lorem ipsum dolor..</p>
+    </div>
+  </div>
+  <div class="column Mess">
+    <div class="content">
+    <img src="images/m2.jpg" alt="Car" style="width:100%" onclick="openModal();currentSlide(14)" class="hover-shadow cursor">
+      <h4>Woman</h4>
+      <p>Lorem ipsum dolor..</p>
+    </div>
+  </div>
+  <div class="column Mess">
+    <div class="content">
+    <img src="images/m3.jpg" alt="Car" style="width:100%" onclick="openModal();currentSlide(15)" class="hover-shadow cursor">
+      <h4>Woman</h4>
+      <p>Lorem ipsum dolor..</p>
+    </div>
+  </div>
+   <div class="column Food Menu">
+    <div class="content">
+    <img src="images/m3.jpg" alt="Car" style="width:100%" onclick="openModal();currentSlide(16)" class="hover-shadow cursor">
+      <h4>Woman</h4>
+      <p>Lorem ipsum dolor..</p>
+    </div>
+  </div>
+ <div class="column Food Menu">
+    <div class="content">
+    <img src="images/m3.jpg" alt="Car" style="width:100%" onclick="openModal();currentSlide(17)" class="hover-shadow cursor">
+      <h4>Woman</h4>
+      <p>Lorem ipsum dolor..</p>
+    </div>
+  </div>
+<!-- END GRID -->
+</div>
+<div id="myModal" class="modal">
+  <span class="close cursor" onclick="closeModal()">&times;</span>
+  <div class="modal-content">
+
+    <div class="mySlides">
+      <div class="numbertext">Building  / Hostel Name</div>
+      <!-- <img src="images/b1.jpg" style="width:100%"> -->
+      <video controls src="videos/movie.mp4"  style="width:100%"></video>
+ </div>
+
+    <div class="mySlides">
+      <div class="numbertext">Building / Hostel Name</div>
+      <img src="images/b2.jpg" style="width:100%">
+    </div>
+    <div class="mySlides">
+      <div class="numbertext">Building  / Hostel Name</div>
+      <img src="images/b3.jpg" style="width:100%">
+    </div>
+
+
+    <div class="mySlides">
+      <div class="numbertext">Reception / Hostel Name</div>
+      <img src="images/re1.jpg" style="width:100%">
+    </div>
+    
+    <div class="mySlides">
+      <div class="numbertext">Reception / Hostel Name</div>
+      <img src="images/re2.jpg" style="width:100%">
+    </div>
+    <div class="mySlides">
+      <div class="numbertext">Reception / Hostel Name</div>
+      <img src="images/re3.jpg" style="width:100%">
+    </div>
+    <div class="mySlides">
+      <div class="numbertext">Our Rooms / Hostel Name</div>
+      <img src="images/r1.jpg" style="width:100%">
+    </div>
+    <div class="mySlides">
+      <div class="numbertext">Our Rooms  / Hostel Name</div>
+      <img src="images/r2.jpg" style="width:100%">
+    </div>
+    <div class="mySlides">
+      <div class="numbertext">Our Rooms / Hostel Name</div>
+      <img src="images/r3.jpg" style="width:100%">
+    </div>
+    <div class="mySlides">
+      <div class="numbertext">Other Facilities  / Hostel Name</div>
+      <img src="images/o1.jpg" style="width:100%">
+    </div>
+    <div class="mySlides">
+      <div class="numbertext">Other Facilities  / Hostel Name</div>
+      <img src="images/o2.jpg" style="width:100%">
+    </div>
+    <div class="mySlides">
+      <div class="numbertext">Other Facilities / Hostel Name</div>
+      <img src="images/o3.jpg" style="width:100%">
+    </div>
+    <div class="mySlides">
+      <div class="numbertext">Mess / Hostel Name</div>
+      <img src="images/m1.jpg" style="width:100%">
+    </div>
+    <div class="mySlides">
+      <div class="numbertext">Mess / Hostel Name</div>
+      <img src="images/m2.jpg" style="width:100%">
+    </div>
+    <div class="mySlides">
+      <div class="numbertext">Mess   / Hostel Name</div>
+      <img src="images/m3.jpg" style="width:100%">
+    </div>
+    <div class="mySlides">
+      <div class="numbertext">Food Menu / Hostel Name</div>
+      <img src="images/m3.jpg" style="width:100%">
+    </div> 
+    <div class="mySlides">
+      <div class="numbertext">Food Menu / Hostel Name</div>
+      <img src="images/m3.jpg" style="width:100%">
+    </div>
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    <div class="caption-container">
+      <p id="caption"></p>
+    </div>
+
+
+    
+  </div>
+</div>
+<!-- END MAIN -->
+</div>
+
+<script>
+
+filterSelection("all")
+
+function filterSelection(c) { 
+  var x, i;
+  x = document.getElementsByClassName("column");
+  if (c == "all") c = "";
+  for (i = 0; i < x.length; i++) {
+    w3RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+  }  
+}
+
+function w3AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+  }
+}
+
+function w3RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1);     
+    }
+  }
+  element.className = arr1.join(" ");
+}
+
+function openModal() {
+  document.getElementById("myModal").style.display = "block";
+}
+
+function closeModal() {
+  document.getElementById("myModal").style.display = "none";
+}
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += "active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+// Add active class to the current button (highlight it)
+var bttnContainer = document.getElementById("mybttnContainer");
+var bttns = bttnContainer.getElementsByClassName("bttn");
+for (var i = 0; i < bttns.length; i++) {
+  bttns[i].addEventListener("click", function(){
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+</script>
+    
+</body>
+ <html>
+<head>
+<title>Font Awesome Icons</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+ <footer style="background: #eee"class = "footer">
+            <div class = "footer-container">
+                <a style="background: #eee;color:green"href="tel:9783998474"class="fa fa-phone fa-3x"> Call Us</a>
+               
+            </div>
+        </footer>
+          <footer class = "footer">
+            <div class = "footer-container">
+                <a href="tel:9783998474"class="fa fa-phone fa-2x"> Call Developer</a>
+                <h4>Developed By Prayas Godara </h4>
+            </div>
+        </footer>
+
+
+</body>
+</html> 
+</html>
